@@ -8,7 +8,7 @@ package sword.offer;
 public class test {
     public static void main(String[] args) {
 
-        test04();
+        test06();
     }
 
     public static void test03() {
@@ -39,5 +39,21 @@ public class test {
         int length = Interview04.replaceBlank(string,12);
         System.out.println(string.length);
         System.out.println(new String(string, 0, length));
+    }
+
+    public static void test05() {
+        Interview05.Node a = new Interview05.Node(1,null);
+        a.next = new Interview05.Node(2,null);
+        a.next.next = new Interview05.Node(3,null);
+        a.next.next.next = new Interview05.Node(4,null);
+
+        Interview05.printReversingly(null);
+    }
+
+    public static void test06() {
+        int[] preorder = {1, 2, 4, 7, 3, 5, 6, 8};
+        int[] inorder = {4, 7, 2, 1, 5, 3, 8, 6};
+        Interview06.TreeNode root = Interview06.construct(preorder,0,7,inorder,0,7);
+        Interview06.afterOrder(root);
     }
 }
