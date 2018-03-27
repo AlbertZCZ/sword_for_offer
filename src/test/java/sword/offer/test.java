@@ -91,8 +91,31 @@ public class test {
         System.out.println(Interview09.fibonacci(5));
     }
 
+    public static void test10() {
+        System.out.println(Integer.toBinaryString(-1));
+        System.out.println(Interview10.numberOfOne(0)); // 0
+        System.out.println(Interview10.numberOfOne(1)); // 1
+        System.out.println(Interview10.numberOfOne(-1)); // -1
+        System.out.println(Interview10.numberOfOne(Integer.MAX_VALUE)); // Integer.MAX_VALUE
+        System.out.println(Interview10.numberOfOne(Integer.MIN_VALUE)); // Integer.MIN_VALUE
+
+        System.out.println("");
+        System.out.println(Interview10.numberOfTwo(0)); // 0
+        System.out.println(Interview10.numberOfTwo(1)); // 1
+        System.out.println(Interview10.numberOfTwo(-1)); // -1
+        System.out.println(Interview10.numberOfTwo(Integer.MAX_VALUE)); // Integer.MAX_VALUE
+        System.out.println(Interview10.numberOfTwo(Integer.MIN_VALUE)); // Integer.MIN_VALUE
+    }
+
+    public static void test11() {
+        System.out.println(Interview11.power(2, -4));
+        System.out.println(Interview11.power(2, 4));
+        System.out.println(Interview11.power(2, 0));
+
+    }
+
     public static void main(String[] args) {
 
-        test09();
+        test11();
     }
 }
