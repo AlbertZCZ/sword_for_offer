@@ -30,8 +30,8 @@ public class Interview12 {
      * @param nlist n位数字
      */
     private static void increment(List<Integer> nlist) {
-        int carrybit = 0;
-        boolean end = false;
+        int carrybit = 0;//进位数
+        boolean end = false;//结束循环标志
         while (true) {
             for (int i = nlist.size() - 1; i >= 0; i--) {
                 int digit = nlist.get(i);
