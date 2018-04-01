@@ -114,8 +114,12 @@ public class test {
 
     }
 
+    public static void test12() {
+        Interview12.printOneToNthDigits(2);
+    }
+
     public static void main(String[] args) {
 
-        test11();
+        test12();
     }
 }
