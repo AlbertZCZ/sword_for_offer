@@ -84,4 +84,57 @@ public class Interview12 {
         System.out.println();
     }
 
+    /*****************************************************************************/
+    /**
+     * 全排列
+     * 数字的每一位都可能是0~9中的一个数
+     * @param n
+     */
+    public static void printOneToNthDigits2(int n) {
+        if (n <= 0)
+            throw new RuntimeException("n不能小于1");
+        //创建一个数组用于打存放值
+        int[] array = new int[n];
+        printOneToNthDigits2(0, array);
+    }
+
+    /**
+     * 输入数字n，按顺序打印出从1最大的n位十进制数。
+     * @param n 当前处理的是第个元素，从0开始计数
+     * @param array 存放结果的数组
+     */
+    private static void printOneToNthDigits2(int n, int[] array) {
+        //// 说明所有的数据排列选择已经处理完了
+        if (n >= array.length)
+            //可以输出
+            printArray(array);
+        else {
+            //每一位都有0~9种可能
+            for (int i = 0;i <= 9;i++) {
+                array[n] = i;
+                printOneToNthDigits2(n + 1,array);
+            }
+        }
+    }
+
+    /**
+     * 输入数组的元素，从左到右，从第一个非0值到开始输出到最后的元素。
+     *
+     * @param array 要输出的数组
+     */
+    private static void printArray(int[] array) {
+        //找第一个非0元素
+        int index = 0;
+        while (index < array.length && array[index] == 0)
+            index++;
+
+        //从第一个非0元素开始输出到最后一个元素
+        for (int i = index;i < array.length;i++) {
+            System.out.print(array[i]);
+        }
+        //换行
+        if (index < array.length)
+            System.out.println();
+    }
+
 }
