@@ -10,6 +10,17 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
+    /**
+     * 打印一颗二叉树
+     * @param root
+     */
+    public static void printTree(TreeNode root) {
+        if (root != null) {
+            System.out.println(root.value);
+            printTree(root.left);
+            printTree(root.right);
+        }
+    }
     @Override
     public String toString() {
         return "TreeNode{" +
