@@ -17,23 +17,29 @@ public class Interview03 {
      */
     public static boolean find(int[][] matrix, int number) {
         //判断条件
-        if (matrix == null || matrix.length < 1 || matrix[0].length < 1)
+        if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {
             return false;
-
-        int rows = matrix.length;//数组行数
-        int cols = matrix[1].length;//数组列数
-
-        int row = 0;//开始的行数
-        int col = cols - 1;//开始的列数
+        }
+        //数组行数
+        int rows = matrix.length;
+        //数组列数
+        int cols = matrix[1].length;
+        //开始的行数
+        int row = 0;
+        //开始的列数
+        int col = cols - 1;
 
         //确保找的位置在数组之内
         while (row >= 0 && row < rows && col >= 0 && col <= cols) {
-            if (matrix[row][col] == number)
+            if (matrix[row][col] == number) {
                 return true;
-            else if (matrix[row][col] > number)// 如果找到的数比要找的数大，说明要找的数在当前数的左边
+            } else if (matrix[row][col] > number) {
+                // 如果找到的数比要找的数大，说明要找的数在当前数的左边
                 col--;
-            else // 如果找到的数比要找的数小，说明要找的数在当前数的下边
+                // 如果找到的数比要找的数小，说明要找的数在当前数的下边
+            } else {
                 row++;
+            }
         }
         return false;
     }

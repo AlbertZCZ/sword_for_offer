@@ -15,28 +15,36 @@ public class Interview04 {
      */
     public static int replaceBlank(char[] string,int usedLength) {
         //判断字符是否合法
-        if (string == null || usedLength > string.length)
+        if (string == null || usedLength > string.length) {
             return -1;
+        }
         //统计字符数组中空白字符数
         int whiteCount = 0;
         for (int i = 0;i < string.length;i++) {
-            if (string[i] == ' ')
+            if (string[i] == ' ') {
                 whiteCount++;
+            }
         }
 
         //计算转换后数组的长度
         //由于是把1个字符替换称3个字符，我们必须把空格后面的所有的字符都后移两个字节
-        int targetLength = whiteCount * 2 + usedLength;//新数组的长度
-        int temp = usedLength;//保存长度用于结果返回
-        if (targetLength > string.length)//如果转换后的长度大于数组的最大长度，则失败
+        //新数组的长度
+        int targetLength = whiteCount * 2 + usedLength;
+        //保存长度用于结果返回
+        int temp = usedLength;
+        //如果转换后的长度大于数组的最大长度，则失败
+        if (targetLength > string.length) {
             return -1;
+        }
 
         //如果空白字符不存在则不处理
-        if (whiteCount == 0)
+        if (whiteCount == 0) {
             return -1;
-
-        targetLength--;//处理后字符放置的位置，指向新数组最后一个
-        usedLength--;//从后向前第一个处理的字符，指向原数组最后一个
+        }
+        //处理后字符放置的位置，指向新数组最后一个
+        //从后向前第一个处理的字符，指向原数组最后一个
+        targetLength--;
+        usedLength--;
 
         //数组中有空白字符，一直到空白字符处理完
         while (usedLength >= 0 && targetLength > usedLength) {

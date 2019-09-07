@@ -33,19 +33,23 @@ public class Interview06 {
      */
     public static TreeNode construct(int[] preorder, int ps, int pe, int[] inorder, int is, int ie) {
         //开始位置大于结束位置说明没有需要处理的元素了
-        if (ps > pe)
+        if (ps > pe) {
             return null;
-        int index = ps;//前序遍历结果的开始位置即为根元素
+        }
+        //前序遍历结果的开始位置即为根元素
+        int index = ps;
         TreeNode root = new TreeNode(preorder[index],null,null);
         //获取根元素在中序遍历中的位置
         int i = is;
         for (;i < ie;i++) {
-            if (inorder[i] == preorder[index])
+            if (inorder[i] == preorder[index]) {
                 break;
+            }
         }
 
-        if (i > ie)
+        if (i > ie) {
             return null;
+        }
 
         // 递归构建当前根结点的左子树，左子树的元素个数：index-is+1个
         // 左子树对应的前序遍历的位置在[ps+1, ps+index-is],下标=个数-1
