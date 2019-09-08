@@ -18,6 +18,7 @@ public class InsertionSort {
                 //将之前元素向后移，将j的指针向前移动一位
                 arr[j] = arr[j-1];
             }
+            //如果进上面循环，j会执行一次j--
             //将e插入索引j的位置
             arr[j] = e;
         }
