@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 /**
  * @Author: zhangchaozhen
@@ -26,6 +26,6 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         Integer[] arr = SortTestHelper.generateRandomArray(20000, 0, 100000);
-        SortTestHelper.testSort("algorithms.InsertionSort", arr);
+        SortTestHelper.testSort("algorithms.sort.InsertionSort", arr);
     }
 }

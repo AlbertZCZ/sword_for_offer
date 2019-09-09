@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 /**
  * @Author: zhangchaozhen
@@ -61,7 +61,7 @@ public class MergeSort {
     public static void main(String[] args) {
         Integer[] integers = SortTestHelper.generateRandomArray(20, 0, 20);
         SortTestHelper.printArray(integers);
-        SortTestHelper.testSort("algorithms.MergeSort",integers);
+        SortTestHelper.testSort("algorithms.sort.MergeSort",integers);
         SortTestHelper.printArray(integers);
     }
 

@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 /**
  * @Author: zhangchaozhen
@@ -19,6 +19,6 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         Integer[] integers = SortTestHelper.generateRandomArray(20000, 0, 100000);
-        SortTestHelper.testSort("algorithms.BubbleSort",integers);
+        SortTestHelper.testSort("algorithms.sort.BubbleSort",integers);
     }
 }

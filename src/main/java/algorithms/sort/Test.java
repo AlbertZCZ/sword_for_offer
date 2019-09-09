@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 import java.util.Arrays;
 
@@ -21,11 +21,11 @@ public class Test {
         Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr5 = Arrays.copyOf(arr1, arr1.length);
 
-        SortTestHelper.testSort("algorithms.SelectionSort", arr1);
-        SortTestHelper.testSort("algorithms.InsertionSort", arr2);
-        SortTestHelper.testSort("algorithms.BubbleSort2", arr3);
-        SortTestHelper.testSort("algorithms.ShellSort", arr4);
-        SortTestHelper.testSort("algorithms.MergeSort", arr5);
+        SortTestHelper.testSort("algorithms.sort.SelectionSort", arr1);
+        SortTestHelper.testSort("algorithms.sort.InsertionSort", arr2);
+        SortTestHelper.testSort("algorithms.sort.BubbleSort2", arr3);
+        SortTestHelper.testSort("algorithms.sort.ShellSort", arr4);
+        SortTestHelper.testSort("algorithms.sort.MergeSort", arr5);
 
         System.out.println();
 
@@ -40,10 +40,10 @@ public class Test {
         arr4 = Arrays.copyOf(arr1, arr1.length);
         arr5 = Arrays.copyOf(arr1, arr1.length);
 
-        SortTestHelper.testSort("algorithms.SelectionSort", arr1);
-        SortTestHelper.testSort("algorithms.InsertionSort", arr2);
-        SortTestHelper.testSort("algorithms.BubbleSort2", arr3);
-        SortTestHelper.testSort("algorithms.ShellSort", arr4);
-        SortTestHelper.testSort("algorithms.MergeSort", arr5);
+        SortTestHelper.testSort("algorithms.sort.SelectionSort", arr1);
+        SortTestHelper.testSort("algorithms.sort.InsertionSort", arr2);
+        SortTestHelper.testSort("algorithms.sort.BubbleSort2", arr3);
+        SortTestHelper.testSort("algorithms.sort.ShellSort", arr4);
+        SortTestHelper.testSort("algorithms.sort.MergeSort", arr5);
     }
 }

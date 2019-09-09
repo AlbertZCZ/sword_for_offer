@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 /**
  * @Author: zhangchaozhen
@@ -35,7 +35,7 @@ public class ShellSort {
     public static void main(String[] args) {
         Integer[] integers = SortTestHelper.generateRandomArray(10, 1, 100);
         SortTestHelper.printArray(integers);
-        SortTestHelper.testSort("algorithms.ShellSort",integers);
+        SortTestHelper.testSort("algorithms.sort.ShellSort",integers);
         SortTestHelper.printArray(integers);
     }
 }

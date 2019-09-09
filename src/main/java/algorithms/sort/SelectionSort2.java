@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sort;
 
 /**
  * @Author: zhangchaozhen
@@ -37,7 +37,7 @@ public class SelectionSort2 {
     public static void main(String[] args) {
 
         Integer[] arr = SortTestHelper.generateRandomArray(20000, 0, 100000);
-        SortTestHelper.testSort("algorithms.SelectionSort2", arr);
+        SortTestHelper.testSort("algorithms.sort.SelectionSort2", arr);
 
     }
 }
